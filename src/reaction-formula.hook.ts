@@ -11,6 +11,11 @@ export function useReactionFormula<T>(
   const [isFocus, setIsFocus] = useState<boolean>(false);
   const [isBlur, setIsBlur] = useState<boolean>(false);
 
+  const isEvent = {
+    blur: isBlur,
+    focus: isFocus,
+  };
+
   function onFocus() {
     setIsFocus(true);
     setIsBlur(false);
@@ -20,6 +25,11 @@ export function useReactionFormula<T>(
     setIsBlur(true);
     setIsFocus(false);
   }
+
+  const eventHandler = {
+    onFocus,
+    onBlur,
+  };
 
   function minLength(value: string, minLength: number): boolean {
     return value.length < minLength;
@@ -51,25 +61,21 @@ export function useReactionFormula<T>(
     return new RegExp(regexp).test(value);
   }
 
-  return {
-    data,
-    setData,
-    isEvent: {
-      focus: isFocus,
-      blur: isBlur,
-    },
-    eventHandler: {
-      onBlur,
-      onFocus,
-    },
-    isError: {
-      minLength,
-      maxLength,
-      emptyLength,
-      definedLength,
-      email,
-      completeMatch,
-      regexp,
-    },
+  const isError = {
+    minLength,
+    maxLength,
+    emptyLength,
+    definedLength,
+    email,
+    completeMatch,
+    regexp,
   };
+
+  const validation = {
+    isEvent,
+    isError,
+    eventHandler,
+  };
+
+  return [data, setData, validation];
 }

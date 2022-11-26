@@ -1,8 +1,8 @@
 import type { Dispatch, SetStateAction } from "react";
 
-export interface UseReactionFormula<T> {
-  data: T;
-  setData: Dispatch<SetStateAction<T>>;
+type Data<T> = T;
+type SetData<T> = Dispatch<SetStateAction<T>>;
+interface Helper {
   isEvent: {
     focus: boolean;
     blur: boolean;
@@ -21,4 +21,6 @@ export interface UseReactionFormula<T> {
     regexp: (value: string, regexp: RegExp) => boolean;
   };
 }
+
+export type UseReactionFormula<T> = [Data<T>, SetData<T>, Helper];
 export type UseReactionFormulaProps<T> = T;
