@@ -9,33 +9,23 @@ import { FC } from "react";
 import { useReactionFormula } from "reaction-formula";
 
 interface Form {
-  language: string;
-  framework: string;
+  name: string;
 }
 
-export const Component: FC = () => {
-  const { data, setData, isEvent, isError, eventHandler } =
-    useReactionFormula<Form>({ language: "typescript", framework: "angular" });
+export const App: FC = () => {
+  const [form, setForm, helperForm] = useReactionFormula<Form>({
+    name: "",
+  });
   return (
     <>
-      {isEvent.focus && isError.emptyLength(data.language) && "error"}
+      {helperForm.isEvent.focus && helperForm.isError.minLength(form.name, 8) && "error"}
       <input
         type="text"
-        value={data.language}
-        onChange={(e) => setData({ ...data, language: e.target.value })}
-        onFocus={eventHandler.onFocus}
-        onBlur={eventHandler.onBlur}
+        value={form.name}
+        onBlur={helperForm.eventHandler.onBlur}
+        onFocus={helperForm.eventHandler.onFocus}
+        onChange={(e) => setForm({ ...form, name: e.target.value })}
       />
-      {isEvent.focus && isError.emptyLength(data.framework) && "error"}
-      <select
-        value={data.framework}
-        onChange={(e) => setData({ ...data, framework: e.target.value })}
-      >
-        <option value="react">react</option>
-        <option value="angular">angular</option>
-        <option value="vue">vue</option>
-      </select>
-      <button onClick={() => console.log(data)}>View data</button>
     </>
   );
 };
