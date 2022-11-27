@@ -1,8 +1,8 @@
-#Install
+# Install
 
 Install the package via [npm](https://www.npmjs.com/package/reaction-formula) or use the command `npm i reaction-formula`
 
-#Usage
+# Usage
 
 ```tsx
 import { FC } from "react";
