@@ -10,23 +10,36 @@ import { useReactionFormula } from "reaction-formula";
 
 interface Form {
   name: string;
+  email: string;
 }
 
-export const App: FC = () => {
+const App: FC = () => {
   const [form, setForm, helperForm] = useReactionFormula<Form>({
     name: "",
+    email: "",
   });
   return (
-    <>
-      {helperForm.isEvent.focus && helperForm.isError.minLength(form.name, 8) && "error"}
+    <div className="reaction-formula">
+      {helperForm.isEvent.focus && helperForm.isError.minLength(form.name, 4) && "error - (min length 4)"}
+      {helperForm.isEvent.focus && helperForm.isError.maxLength(form.name, 8) && "error - (max length 8)"}
       <input
         type="text"
         value={form.name}
+        onChange={(e) => setForm({ ...form, name: e.target.value })}
         onBlur={helperForm.eventHandler.onBlur}
         onFocus={helperForm.eventHandler.onFocus}
-        onChange={(e) => setForm({ ...form, name: e.target.value })}
       />
-    </>
+      {helperForm.isEvent.focus && helperForm.isError.email(form.email) && "invalid email"}
+      <input
+        type="text"
+        value={form.email}
+        onChange={(e) => setForm({ ...form, email: e.target.value })}
+        onBlur={helperForm.eventHandler.onBlur}
+        onFocus={helperForm.eventHandler.onFocus}
+      />
+    </div>
   );
 };
+
+export default App;
 ```
