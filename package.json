@@ -1,7 +1,7 @@
 {
   "name": "reaction-formula",
   "version": "1.0.8",
-  "description": "",
+  "description": "Reaction formula is a hook for simple form validation in react applications.",
   "main": "./dist/index.js",
   "scripts": {
     "build": "webpack && npm version patch && npm publish"
@@ -10,6 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/zharinov-nikita/reaction-formula.git"
   },
+  "keywords": [
+    "reaction-formula",
+    "react",
+    "react hooks",
+    "validation",
+    "forms"
+  ],
   "author": "zharinov-nikita",
   "license": "ISC",
   "bugs": {
