@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`validatorIsMaxLength snapshot 1`] = `true`;
+
+exports[`validatorIsMaxLength snapshot 2`] = `false`;
+
+exports[`validatorIsMaxLength snapshot 3`] = `true`;
+
+exports[`validatorIsMaxLength snapshot 4`] = `false`;
