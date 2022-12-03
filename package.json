@@ -5,7 +5,7 @@
   "main": "./dist/index.js",
   "scripts": {
     "build": "webpack && npm version patch && npm publish",
-    "test": "jest",
+    "test": "jest --verbose ./src",
     "hook": "npx generate-react-cli component --type=hook",
     "validator": "npx generate-react-cli component --type=validator"
   },
