@@ -20,7 +20,11 @@ describe('validatorIsMinLength', () => {
   test('snapshot', () => {
     expect(expect(validatorIsMinLength({ value: 'hi ', minLength: 4 }))).toMatchSnapshot()
     expect(expect(validatorIsMinLength({ value: 'hi ', minLength: 2 }))).toMatchSnapshot()
-    expect(expect(validatorIsMinLength({ value: 'hi ', minLength: 3, clearOfSpaces: true }))).toMatchSnapshot()
-    expect(expect(validatorIsMinLength({ value: 'hi ', minLength: 1, clearOfSpaces: true }))).toMatchSnapshot()
+    expect(
+      expect(validatorIsMinLength({ value: 'hi ', minLength: 3, clearOfSpaces: true }))
+    ).toMatchSnapshot()
+    expect(
+      expect(validatorIsMinLength({ value: 'hi ', minLength: 1, clearOfSpaces: true }))
+    ).toMatchSnapshot()
   })
 })
