@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { EventHandlerType, EventType } from '../../types'
+import { TypeEvent, TypeEventHandler } from '../../types'
 import { UseEvent } from './event.types'
 
 export function useEvent(): UseEvent {
@@ -16,12 +16,12 @@ export function useEvent(): UseEvent {
     setIsFocus(false)
   }
 
-  const eventHandler: EventHandlerType = {
+  const eventHandler: TypeEventHandler = {
     onFocus,
     onBlur,
   }
 
-  const event: EventType = {
+  const event: TypeEvent = {
     isBlur,
     isFocus,
   }

@@ -1,1 +1,1 @@
-export type DataType<T> = T
+export type TypeData<T> = T

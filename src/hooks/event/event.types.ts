@@ -1,6 +1,6 @@
-import { EventHandlerType, EventType } from '../../types'
+import { TypeEvent, TypeEventHandler } from '../../types'
 
 export interface UseEvent {
-  eventHandler: EventHandlerType
-  event: EventType
+  event: TypeEvent
+  eventHandler: TypeEventHandler
 }

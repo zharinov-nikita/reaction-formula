@@ -1,11 +1,11 @@
-import { EventHandlerType, EventType, SetDataType, ValidatorType } from '../../types'
+import { TypeEvent, TypeEventHandler, TypeSetData, TypeValidator } from '../../types'
 
-export interface Validate<T> {
+interface Validate<T> {
   data: T
-  setData: SetDataType<T>
-  event: EventType
-  eventHandler: EventHandlerType
-  validator: ValidatorType
+  setData: TypeSetData<T>
+  event: TypeEvent
+  eventHandler: TypeEventHandler
+  validator: TypeValidator
 }
 
 export interface ReactionFormulaProps<T> {

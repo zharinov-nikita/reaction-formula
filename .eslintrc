@@ -1,0 +1,40 @@
+{
+  "root": true,
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": { "project": ["./tsconfig.json"] },
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "no-useless-escape": "off"
+  },
+  "overrides": [
+    {
+      "files": ["./src/validators/**/*.ts"],
+      "rules": {
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "selector": ["variable", "function", "interface", "typeAlias"],
+            "format": ["PascalCase"],
+            "modifiers": ["exported"],
+            "prefix": ["validator", "Validator"]
+          }
+        ]
+      }
+    },
+    {
+      "files": ["./src/types/**/*.ts"],
+      "rules": {
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "selector": ["interface", "typeAlias"],
+            "format": ["PascalCase"],
+            "modifiers": ["exported"],
+            "prefix": ["Type"]
+          }
+        ]
+      }
+    }
+  ]
+}

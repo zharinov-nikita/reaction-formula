@@ -1,4 +1,4 @@
-export interface EventHandlerType {
+export interface TypeEventHandler {
   onFocus: () => void
   onBlur: () => void
 }

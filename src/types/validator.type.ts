@@ -9,7 +9,7 @@ import {
   ValidatorIsMinLengthProps,
 } from '../validators'
 
-export interface ValidatorType {
+export interface TypeValidator {
   isEmail: (props: ValidatorIsEmailProps) => ValidatorIsEmail
   isEmpty: (props: ValidatorIsEmptyProps) => ValidatorIsEmpty
   isMaxLength: (props: ValidatorIsMaxLengthProps) => ValidatorIsMaxLength
