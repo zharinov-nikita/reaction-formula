@@ -4,7 +4,7 @@
   "description": "Reaction formula is a hook for simple form validation in react applications.",
   "main": "./dist/index.js",
   "scripts": {
-    "build": "webpack && npm version patch && npm publish",
+    "build": "webpack",
     "test": "jest --verbose --colors ./src",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\"",
     "lint": "npx eslint --color ./src",
