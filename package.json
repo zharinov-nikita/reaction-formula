@@ -1,6 +1,6 @@
 {
   "name": "reaction-formula",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Reaction formula is a hook for simple form validation in react applications.",
   "main": "./dist/index.js",
   "scripts": {
