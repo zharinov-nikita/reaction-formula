@@ -9,7 +9,8 @@
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\"",
     "lint": "npx eslint ./src",
     "hook": "npx generate-react-cli component --type=hook",
-    "validator": "npx generate-react-cli component --type=validator"
+    "validator": "npx generate-react-cli component --type=validator",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -56,13 +57,5 @@
   },
   "files": [
     "dist"
-  ],
-  "husky": {
-    "hooks": {
-      "pre-commit": [
-        "npm run format",
-        "npm run lint"
-      ]
-    }
-  }
+  ]
 }
