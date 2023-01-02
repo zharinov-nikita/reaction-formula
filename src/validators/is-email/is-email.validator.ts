@@ -1,4 +1,4 @@
-import { ValidatorIsEmail, ValidatorIsEmailProps } from './is-email.types'
+import { ValidatorIsEmail, ValidatorIsEmailProps } from './is-email.types';
 
 export function validatorIsEmail(value: ValidatorIsEmailProps): ValidatorIsEmail {
   const regexp =

@@ -7,7 +7,7 @@
     "build": "webpack",
     "test": "jest --verbose --colors ./src",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\"",
-    "lint": "npx eslint ./src",
+    "lint": "npx eslint --color ./src",
     "hook": "npx generate-react-cli component --type=hook",
     "validator": "npx generate-react-cli component --type=validator",
     "prepare": "husky install"
