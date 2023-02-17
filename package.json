@@ -5,11 +5,10 @@
   "main": "./dist/index.js",
   "scripts": {
     "build": "webpack",
-    "test": "jest --verbose --colors ./src",
-    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\"",
     "lint": "npx eslint --color ./src",
-    "hook": "npx generate-react-cli component --type=hook",
-    "validator": "npx generate-react-cli component --type=validator",
+    "test": "jest --verbose --colors --watchAll ./src",
+    "pre-test": "jest --verbose --colors ./src",
+    "format": "prettier --write \"src/**/*.ts\"",
     "prepare": "husky install"
   },
   "repository": {
