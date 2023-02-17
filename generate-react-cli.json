@@ -1,0 +1,39 @@
+{
+  "usesTypeScript": false,
+  "component": {
+    "hook": {
+      "customTemplates": {
+        "component": ".generate-react-cli/hook/TemplateName.hook.ts",
+        "types": ".generate-react-cli/hook/TemplateName.types.ts",
+        "test": ".generate-react-cli/hook/TemplateName.test.ts",
+        "index": ".generate-react-cli/hook/index.ts"
+      },
+      "path": "src/hooks",
+      "withTypes": true,
+      "withTest": true,
+      "withIndex": true
+    },
+    "validator": {
+      "customTemplates": {
+        "component": ".generate-react-cli/validator/TemplateName.validator.ts",
+        "types": ".generate-react-cli/validator/TemplateName.types.ts",
+        "test": ".generate-react-cli/validator/TemplateName.test.ts",
+        "index": ".generate-react-cli/validator/index.ts"
+      },
+      "path": "src/validators",
+      "withTypes": true,
+      "withTest": true,
+      "withIndex": true
+    },
+    "default": {
+      "path": "src/components",
+      "withStyle": true,
+      "withTest": true,
+      "withStory": true,
+      "withLazy": true
+    }
+  },
+  "usesCssModule": true,
+  "cssPreprocessor": "css",
+  "testLibrary": "Testing Library"
+}

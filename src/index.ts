@@ -1,2 +1,2 @@
-export * from './reaction-formula.hook'
-export * from './reaction-formula.types'
+export { ReactionFormula } from './components'
+export { useReactionFormula } from './hooks'
